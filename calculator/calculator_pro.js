@@ -128,3 +128,5 @@ do {
 } while (otherNums === "si");
 
 alert("Bye!");
+
+export default sum;

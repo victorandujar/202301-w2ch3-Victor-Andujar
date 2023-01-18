@@ -1,0 +1,845 @@
+html {
+    font-size: 100%;
+    width: 100%;
+    height: 100%;
+}
+
+h1 {
+    position: absolute;
+    left: 30px;
+}
+
+body {
+    font-family: 'Orbitron', sans-serif;
+    background: linear-gradient(160deg, white, #36a4ff, #0004f7dc, black);
+}
+
+.welcome {
+    position: absolute;
+    left: 950px;
+    top: 150px;
+    color: white;
+}
+
+.welcome-message {
+    font-size: 18px;
+    letter-spacing: 3px;
+}
+
+.rules {
+    position: absolute;
+    top: 100px;
+    left: 25px;
+    font-size: 16px;
+}
+
+.rules-list {
+    position: relative;
+    top: 100px;
+    font-size: 11px;
+    letter-spacing: 0.5px;
+    padding-right: 50px;
+}
+
+.accept-button {
+    position: relative;
+    top: 100px;
+    left: 25px;
+    border: none;
+    border-radius: 7px;
+    background: rgb(0, 0, 0);
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 13px;
+    width: 100px;
+    height: 25px;
+    box-shadow: 10px 10px 15px rgb(44, 44, 44);
+}
+
+.game-show {
+    display: flex;
+    align-items: center;
+}
+
+button {
+    cursor: pointer;
+}
+
+button:active {
+    background-color: rgb(244, 204, 1);
+}
+
+.config {
+    position: absolute;
+    left: 1125px;
+    top: 285px;
+}
+
+.settings {
+    background: black;
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 12px;
+    border-radius: 5px;
+    box-shadow: 10px 10px 15px rgb(44, 44, 44);
+}
+
+.vsIA {
+    position: absolute;
+    left: 190px;
+    width: 90px;
+    background: white;
+    color: black;
+    font-family: 'Orbitron', sans-serif;
+    border-radius: 5px;
+}
+
+.onevone {
+    position: absolute;
+    left: 120px;
+    width: 60px;
+    background: white;
+    color: black;
+    font-family: 'Orbitron', sans-serif;
+    border-radius: 5px;
+}
+
+.play-game {
+    position: absolute;
+    left: 1125px;
+    top: 320px;
+    width: 93px;
+    height: 25px;
+    border-radius: 5px;
+    box-shadow: 10px 10px 15px rgb(44, 44, 44);
+    font-family: 'Orbitron', sans-serif;
+    font-size: 12px;
+    background: gray;
+    color: white;
+}
+
+.end-game {
+    position: absolute;
+    left: 1125px;
+    top: 360px;
+    width: 110px;
+    height: 30px;
+    border-radius: 5px;
+    box-shadow: 10px 10px 15px rgb(44, 44, 44);
+    font-family: 'Orbitron', sans-serif;
+    background: rgb(126, 19, 19);
+    color: white;
+    font-size: 13px;
+}
+
+.play-again {
+    position: absolute;
+    left: 1120px;
+    top: 280px;
+    width: 110px;
+    height: 30px;
+    border-radius: 5px;
+    box-shadow: 10px 10px 15px rgb(44, 44, 44);
+    font-family: 'Orbitron', sans-serif;
+    background: rgb(172, 140, 1);
+    color: white;
+    font-size: 13px;
+}
+
+.winner-text {
+    position: absolute;
+    left: 1127px;
+    top: 337px;
+    color: white;
+    font-size: 18px;
+    text-shadow: 2px 2px #000000;
+}
+
+.board-composition {
+    position: absolute;
+    background: rgb(251, 251, 252);
+    border: 5px solid rgb(196, 194, 194);
+    border-radius: 15px;
+    padding-left: 7px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-right: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 547px;
+    height: 470px;
+    box-shadow: 20px 15px 45px rgb(0, 0, 0);
+    top: 150px;
+    left: 250px;
+}
+
+.circle {
+    width: 68px;
+    height: 68px;
+    border: none;
+    border-radius: 50%;
+    box-shadow: inset 10px 7px 20px rgb(16, 16, 16);
+    cursor: pointer;
+    margin: 5px;
+}
+
+.circle-turn {
+    width: 70px;
+    height: 70px;
+    border: none;
+    border-radius: 50%;
+    box-shadow: inset 10px 7px 20px rgb(16, 16, 16);
+}
+
+.player-display {
+    position: absolute;
+    display: flex;
+    top: 480px;
+    left: 1130px;
+}
+
+.player-color {
+    background: rgb(255, 255, 255);
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 15px 5px 15px 5px;
+    box-shadow: 10px 10px 15px rgb(44, 44, 44);
+}
+
+.whos-playing {
+    position: absolute;
+    display: flex;
+    left: 1100px;
+    top: 570px;
+}
+
+.player-playing {
+    width: 130px;
+    height: 25px;
+    border: 2px solid black;
+    margin: 30px;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 10px 10px 15px rgb(44, 44, 44);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 82px;
+    height: 25px;
+    font-size: 13px;
+}
+
+.timer-turn {
+    position: absolute;
+    left: 1125px;
+    top: 215px;
+}
+
+.text-turn {
+    color: white;
+    text-shadow: 2px 2px #000000;
+}
+
+.seconds {
+    position: absolute;
+    border: 3px solid white;
+    border-radius: 50%;
+    width: 31px;
+    height: 31px;
+    font-size: 15px;
+    color: rgb(101, 253, 0);
+    top: -10px;
+    left: 133px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.timer-game {
+    position: absolute;
+    left: 1123px;
+    top: 160px;
+}
+
+.game-time {
+    font-size: 17px;
+    color: white;
+    text-shadow: 2px 2px #000000;
+}
+
+.timer {
+    position: absolute;
+    border: 3px solid white;
+    border-radius: 10px;
+    width: 70px;
+    height: 20px;
+    bottom: 1px;
+    top: 0px;
+    left: 135px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    color: rgb(252, 185, 3);
+}
+
+.not-pressed {
+    background: rgb(7, 7, 195);
+}
+
+.player1 {
+    background-color: rgb(191, 0, 0);
+}
+
+.player2 {
+    background-color: rgb(248, 211, 0);
+}
+
+.hidden {
+    display: none;
+}
+
+@media only screen and (max-width: 1450px) {
+    html {
+        font-size: 80%;
+        width: 100%;
+        height: 100%;
+    }
+
+    h1 {
+        position: absolute;
+        left: 30px;
+    }
+
+    body {
+        font-family: 'Orbitron', sans-serif;
+        background: linear-gradient(160deg, white, #36a4ff, #0004f7dc, black);
+    }
+
+
+    .welcome {
+        position: absolute;
+        left: 850px;
+        top: 150px;
+        color: white;
+        padding-right: 20px;
+    }
+
+    .welcome-message {
+        font-size: 18px;
+    }
+
+    .rules {
+        position: absolute;
+        top: 100px;
+        left: 25px;
+        font-size: 14px;
+    }
+
+    .rules-list {
+        position: relative;
+        top: 80px;
+        font-size: 10px;
+    }
+
+    .accept-button {
+        position: relative;
+        top: 100px;
+        left: 25px;
+        border: none;
+        border-radius: 7px;
+        background: rgb(0, 0, 0);
+        color: white;
+        font-family: 'Orbitron', sans-serif;
+        font-size: 12px;
+        width: 85px;
+        height: 25px;
+        box-shadow: 10px 10px 15px rgb(44, 44, 44);
+    }
+
+    .play-game {
+        position: absolute;
+        left: 940px;
+        top: 285px;
+        width: 80px;
+        height: 25px;
+        border-radius: 5px;
+        box-shadow: 10px 10px 15px rgb(44, 44, 44);
+        font-size: 11px;
+        font-family: 'Orbitron', sans-serif;
+        background: gray;
+        color: white;
+    }
+
+    .config {
+        position: absolute;
+        left: 940px;
+        top: 250px;
+    }
+
+    .settings {
+        font-size: 11px;
+        background: black;
+        color: white;
+        font-family: 'Orbitron', sans-serif;
+        border-radius: 5px;
+        box-shadow: 10px 10px 15px rgb(44, 44, 44);
+    }
+
+    .vsIA {
+        position: absolute;
+        left: 200px;
+        width: 80px;
+        background: white;
+        font-size: 11px;
+        color: black;
+        font-family: 'Orbitron', sans-serif;
+        border-radius: 5px;
+    }
+
+    .onevone {
+        position: absolute;
+        left: 130px;
+        width: 60px;
+        background: white;
+        font-size: 11px;
+        color: black;
+        font-family: 'Orbitron', sans-serif;
+        border-radius: 5px;
+    }
+
+    .end-game {
+        position: absolute;
+        left: 940px;
+        top: 320px;
+        width: 105px;
+        height: 25px;
+        border-radius: 5px;
+        box-shadow: 10px 10px 15px rgb(44, 44, 44);
+        font-size: 12px;
+        font-family: 'Orbitron', sans-serif;
+        background: rgb(126, 19, 19);
+        color: white;
+    }
+
+    .play-again {
+        position: absolute;
+        left: 940px;
+        top: 270px;
+        width: 105px;
+        height: 25px;
+        border-radius: 5px;
+        box-shadow: 10px 10px 15px rgb(44, 44, 44);
+        font-family: 'Orbitron', sans-serif;
+        font-size: 12px;
+        background: rgb(172, 140, 1);
+        color: white;
+    }
+
+    .winner-text {
+        position: absolute;
+        left: 943px;
+        top: 327px;
+        color: white;
+        text-shadow: 2px 2px #000000;
+    }
+
+    .board-composition {
+        position: absolute;
+        background: rgb(251, 251, 252);
+        border: 5px solid rgb(196, 194, 194);
+        border-radius: 15px;
+        display: flex;
+        flex-wrap: wrap;
+        width: 525px;
+        height: 460px;
+        box-shadow: 20px 15px 45px rgb(0, 0, 0);
+        top: 150px;
+        left: 180px;
+    }
+
+    .circle {
+        width: 65px;
+        height: 65px;
+        border: none;
+        border-radius: 50%;
+        box-shadow: inset 10px 7px 20px rgb(16, 16, 16);
+        cursor: pointer;
+        margin: 5px;
+    }
+
+    .circle-turn {
+        width: 68px;
+        height: 68px;
+        border: none;
+        border-radius: 50%;
+        box-shadow: inset 10px 7px 20px rgb(16, 16, 16);
+    }
+
+    .player-display {
+        position: absolute;
+        display: flex;
+        top: 470px;
+        left: 945px;
+    }
+
+    .player-color {
+        background: rgb(255, 255, 255);
+        border: 2px solid black;
+        border-radius: 5px;
+        padding: 15px 5px 15px 5px;
+        box-shadow: 10px 7px 15px rgb(44, 44, 44);
+    }
+
+    .whos-playing {
+        position: absolute;
+        display: flex;
+        left: 914px;
+        top: 560px;
+    }
+
+    .player-playing {
+        width: 110px;
+        height: 25px;
+        border: 2px solid black;
+        margin: 30px;
+        border-radius: 5px;
+        background-color: white;
+        box-shadow: 10px 10px 15px rgb(44, 44, 44);
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 82px;
+        height: 20px;
+        font-size: 12px;
+    }
+
+    .timer-turn {
+        position: absolute;
+        left: 940px;
+        top: 205px;
+    }
+
+    .text-turn {
+        color: white;
+        text-shadow: 2px 2px #000000;
+        font-size: 15px;
+    }
+
+    .seconds {
+        position: absolute;
+        border: 3px solid white;
+        border-radius: 50%;
+        width: 27px;
+        height: 27px;
+        font-size: 13px;
+        color: rgb(101, 253, 0);
+        top: -10px;
+        left: 115px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .timer-game {
+        position: absolute;
+        left: 940px;
+        top: 160px
+    }
+
+    .game-time {
+        font-size: 15px;
+        color: white;
+        text-shadow: 2px 2px #000000;
+    }
+
+    .timer {
+        position: absolute;
+        border: 3px solid white;
+        border-radius: 10px;
+        width: 55px;
+        height: 15px;
+        bottom: 1px;
+        padding-bottom: 2px;
+        left: 115px;
+        text-align: center;
+        font-size: 13px;
+        color: rgb(252, 185, 3);
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    html {
+        font-size: 80%;
+        width: 100%;
+        height: 100%;
+    }
+
+    h1 {
+        position: absolute;
+        left: 30px;
+    }
+
+    body {
+        font-family: 'Orbitron', sans-serif;
+        background: linear-gradient(160deg, white, #36a4ff, #0004f7dc, black);
+    }
+
+    .welcome {
+        position: absolute;
+        left: 750px;
+        top: 100px;
+        color: white;
+        padding-right: 50px;
+    }
+
+    .welcome-message {
+        font-size: 18px;
+    }
+
+    .rules {
+        position: absolute;
+        top: 70px;
+        left: 25px;
+        font-size: 14px;
+    }
+
+    .rules-list {
+        position: relative;
+        top: 60px;
+        font-size: 10px;
+    }
+
+    .accept-button {
+        position: relative;
+        top: 80px;
+        left: 25px;
+        border: none;
+        border-radius: 7px;
+        background: rgb(0, 0, 0);
+        color: white;
+        font-family: 'Orbitron', sans-serif;
+        font-size: 11px;
+        width: 80px;
+        height: 20px;
+        box-shadow: 10px 10px 15px rgb(44, 44, 44);
+    }
+
+    .play-game {
+        position: absolute;
+        left: 785px;
+        top: 235px;
+        width: 80px;
+        height: 20px;
+        border-radius: 5px;
+        box-shadow: 10px 10px 15px rgb(44, 44, 44);
+        font-size: 11px;
+        font-family: 'Orbitron', sans-serif;
+        background: gray;
+        color: white;
+    }
+
+    .config {
+        position: absolute;
+        left: 785px;
+        top: 200px;
+    }
+
+    .settings {
+        font-size: 11px;
+        width: 87px;
+    }
+
+    .vsIA {
+        position: absolute;
+        left: 200px;
+        width: 80px;
+        background: white;
+        color: black;
+        font-family: 'Orbitron', sans-serif;
+        border-radius: 5px;
+    }
+
+    .onevone {
+        position: absolute;
+        left: 130px;
+        width: 60px;
+        background: white;
+        color: black;
+        font-family: 'Orbitron', sans-serif;
+        border-radius: 5px;
+    }
+
+    .end-game {
+        position: absolute;
+        left: 780px;
+        top: 235px;
+        width: 95px;
+        height: 22px;
+        border-radius: 5px;
+        box-shadow: 10px 10px 15px rgb(44, 44, 44);
+        font-size: 12px;
+        font-family: 'Orbitron', sans-serif;
+        background: rgb(126, 19, 19);
+        color: white;
+        font-size: 11px;
+    }
+
+    .play-again {
+        position: absolute;
+        left: 780px;
+        top: 190px;
+        width: 95px;
+        height: 22px;
+        border-radius: 5px;
+        box-shadow: 10px 10px 15px rgb(44, 44, 44);
+        font-family: 'Orbitron', sans-serif;
+        font-size: 11px;
+        background: rgb(172, 140, 1);
+        color: white;
+        font-size: 11px;
+    }
+    
+    .winner-text {
+        position: absolute;
+        left: 775px;
+        top: 247px;
+        color: white;
+        font-size: 15px;
+        text-shadow: 2px 2px #000000;
+    }
+
+    .board-composition {
+        position: absolute;
+        background: rgb(251, 251, 252);
+        border: 5px solid rgb(196, 194, 194);
+        border-radius: 15px;
+        padding-left: 7px;
+        padding-top: 7px;
+        padding-bottom: 7px;
+        padding-right: 7px;
+        display: flex;
+        flex-wrap: wrap;
+        width: 455px;
+        height: 390px;
+        box-shadow: 20px 15px 45px rgb(0, 0, 0);
+        top: 100px;
+        left: 180px;
+    }
+
+    .circle {
+        width: 55px;
+        height: 55px;
+        border: none;
+        border-radius: 50%;
+        box-shadow: inset 10px 7px 20px rgb(16, 16, 16);
+        cursor: pointer;
+        margin: 5px;
+    }
+
+
+    .circle-turn {
+        width: 55px;
+        height: 55px;
+        border: none;
+        border-radius: 50%;
+        box-shadow: inset 10px 7px 20px rgb(16, 16, 16);
+    }
+
+    .player-display {
+        position: absolute;
+        display: flex;
+        top: 370px;
+        left: 790px;
+    }
+
+    .player-color {
+        background: rgb(255, 255, 255);
+        border: 2px solid black;
+        border-radius: 5px;
+        padding-left: 5px;
+        padding-right: 5px;
+        box-shadow: 10px 10px 15px rgb(44, 44, 44);
+    }
+
+    .whos-playing {
+        position: absolute;
+        display: flex;
+        left: 758px;
+        top: 440px;
+    }
+
+    .player-playing {
+        width: 100px;
+        height: 20px;
+        border: 2px solid black;
+        margin: 30px;
+        border-radius: 5px;
+        background-color: white;
+        box-shadow: 10px 10px 15px rgb(44, 44, 44);
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 70px;
+        height: 18px;
+    }
+
+    .timer-turn {
+        position: absolute;
+        left: 780px;
+        top: 145px;
+    }
+
+    .text-turn {
+        color: white;
+        text-shadow: 2px 2px #000000;
+    }
+
+    .seconds {
+        position: absolute;
+        border: 3px solid white;
+        border-radius: 50%;
+        width: 27px;
+        height: 27px;
+        font-size: 13px;
+        color: rgb(101, 253, 0);
+        top: -10px;
+        left: 115px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .timer-game {
+        position: absolute;
+        left: 780px;
+        top: 100px
+    }
+
+    .game-time {
+        font-size: 15px;
+        color: white;
+        text-shadow: 2px 2px #000000;
+    }
+
+    .timer {
+        position: absolute;
+        border: 3px solid white;
+        border-radius: 10px;
+        width: 55px;
+        height: 15px;
+        bottom: 1px;
+        padding-bottom: 1px;
+        left: 115px;
+        text-align: center;
+        font-size: 13px;
+        color: rgb(252, 185, 3);
+    }
+}

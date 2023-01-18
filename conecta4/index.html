@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <h1>Conecta 4</h1>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap");
+    </style>
+  </head>
+
+  <body>
+    <section class="welcome">
+      <h2 class="welcome-message">Bienvenid@ a Conecta 4</h2>
+      <div class="rules">Reglas</div>
+      <ul class="rules-list">
+        <li>Puedes escoger en "Settings" un modo de juego. Por defecto jugarás contra la CPU.</li><br>
+        <li>Si escoges un modo de juego, pulsa "Play" para empezar a jugar.</li><br>
+        <li>Dispones de 60 segundos para salir vencedor.</li><br>
+        <li>Cada turno son máximo 5 segundos por jugador.</li><br>
+        <li>Para terminar la partida, pulsa el botón "End Game", que aparecerá cuando el juego empiece.</li><br>
+        <li>El juego consiste en juntar 4 fichas del mismo color. En horiztonal, vertical o diagonal.</li><br>
+      </ul>
+      <button class="accept-button">Accept</button>
+    </section>
+    <section class="game hidden">
+      <div class="config">
+        <button class="settings">⚙️ Settings</button>
+        <button class="vsIA hidden">1 vs CPU</button>
+        <button class="onevone hidden">1 vs 1</button>
+      </div>
+      <main class="game-show">
+        <button class="play-game">▶ Play</button>
+        <button class="end-game hidden">☠︎ End Game</button>
+        <button class="play-again hidden">↺ Play Again</button>
+        <div class="winner-text"></div>
+
+        <div class="player-display">
+          <div class="player-color">
+            <div class="circle-turn not-pressed"></div>
+          </div>
+        </div>
+        <div class="whos-playing">
+          <div class="player-playing"></div>
+        </div>
+        <div class="timer-turn">
+          <div class="text-turn">Turn timer</div>
+          <div class="seconds"></div>
+        </div>
+        <div class="timer-game">
+          <div class="game-time">Game time</div>
+          <div class="timer"></div>
+        </div>
+      </main>
+    </section>
+    <div class="board-composition"></div>
+
+    <script src="conect4.js"></script>
+  </body>
+</html>

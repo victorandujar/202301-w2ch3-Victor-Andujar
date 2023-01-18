@@ -156,7 +156,9 @@ const rankingAndPoints = () => {
 
     let rankingTable = `La tabla de puntuaciones es la siguiente:\n`;
     for (const i in players) {
-      rankingTable = `${rankingTable} ${players[i].name}: ${players[i].points}\n`;
+      if (rankingTable) {
+        rankingTable = `${rankingTable} ${players[i].name}: ${players[i].points}\n`;
+      }
     }
 
     alert(rankingTable);
@@ -169,7 +171,6 @@ numbers = [];
 let turnCounter = [];
 let totalTurns;
 const newTurn = () => {
-  let bingoCard;
   numberTurn = getRandomNumber();
   alert(`El número premiado es: ${numberTurn}`);
   for (const i in playingNumbers) {
@@ -178,7 +179,7 @@ const newTurn = () => {
     }
   }
 
-  bingoCard = playingNumbers.map((nums) => {
+  const bingoCard = playingNumbers.map((nums) => {
     if (nums.matched === true) {
       return "X";
     }
